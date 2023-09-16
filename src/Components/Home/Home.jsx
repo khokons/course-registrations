@@ -2,19 +2,36 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Home = () => {
 
-    const [allCourses, setAllCourses]=useState([])
+    const [allCourses, setAllCourses]=useState([]);
+    const [selectedCourses, setSelectedCourses] =useState([])
 
     useEffect(() =>{
         fetch('./data.json')
         .then(res=> res.json())
         .then(data=> setAllCourses(data))
 
-    },[])
+    },[]);
 
 
-console.log(allCourses);
+    const handleSelectCourse = (course) => {
+        const isExist =selectedCourses.find((item) => item.id==course.id);
+        if(isExist){
+            return toast("Already paid this course");
+        }
+        else{
+            setSelectedCourses([...selectedCourses,course])
+        }
+        
+
+    }
+console.log(selectedCourses)
+
+
     return (
         <div>
         <div className="container mt-16 max-w-screen-xl mx-auto">
@@ -36,7 +53,8 @@ allCourses.map(course => (
         <div><p className='font-bold'><span> Credit : {course.credit}hr</span></p></div> 
     </div>
   
-     <button className='bg-blue-800 w-full p-2 mt-2 text-white font-bold'>Select</button>
+     <button onClick={()=> handleSelectCourse(course)} className='bg-blue-800 w-full p-2 mt-2 text-white font-bold'>Select</button>
+     <ToastContainer></ToastContainer>
     
 </div>
 ))
@@ -44,7 +62,9 @@ allCourses.map(course => (
 
 </div>
 <div className="cart">
-<Cart></Cart>
+<Cart
+selectedCourses={selectedCourses}
+></Cart>
 </div>
 </div>
 

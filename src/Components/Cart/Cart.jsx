@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const Cart = () => {
+const Cart = ({selectedCourses}) => {
     return (
         <div>
             
@@ -10,6 +11,13 @@ const Cart = () => {
             <h2 className='text-4xl mb-5 mt-5'>Courses Name</h2>
             <hr />
 
+            <ol> 
+                   {selectedCourses.map((course, index) => ( 
+                       <li key={course.id}>
+                           {index + 1}. {course.title} 
+                       </li>
+                   ))}
+               </ol>
 
 
             < hr />
