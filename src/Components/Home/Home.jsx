@@ -9,6 +9,7 @@ const Home = () => {
 
     const [allCourses, setAllCourses]=useState([]);
     const [selectedCourses, setSelectedCourses] =useState([])
+    const [totalCost, setTotalCost] = useState(0)
 
     useEffect(() =>{
         fetch('./data.json')
@@ -20,10 +21,18 @@ const Home = () => {
 
     const handleSelectCourse = (course) => {
         const isExist =selectedCourses.find((item) => item.id==course.id);
+        let count = course.credit;
         if(isExist){
             return toast("Already paid this course");
         }
         else{
+
+            
+            selectedCourses.forEach((item) => {
+                count = count+item.credit
+            });
+
+            setTotalCost(count)
             setSelectedCourses([...selectedCourses,course])
         }
         
@@ -64,6 +73,7 @@ allCourses.map(course => (
 <div className="cart">
 <Cart
 selectedCourses={selectedCourses}
+totalCost={totalCost}
 ></Cart>
 </div>
 </div>

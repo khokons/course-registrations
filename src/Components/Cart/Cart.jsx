@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const Cart = ({selectedCourses}) => {
+const Cart = ({selectedCourses,totalCost}) => {
     return (
         <div>
             
@@ -21,7 +21,7 @@ const Cart = ({selectedCourses}) => {
 
 
             < hr />
-            <h2 className='mt-5 text-xl text-[#1C1B1BCC]'>Total Credit Hour : hr</h2>
+            <h2 className='mt-5 text-xl text-[#1C1B1BCC]'>Total Credit Hour : {totalCost}hr</h2>
         </div>
     );
 };
