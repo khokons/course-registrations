@@ -59,7 +59,7 @@ console.log(selectedCourses)
         <div>
         <div className="container mt-16 max-w-screen-xl mx-auto">
           <div className="Home_container flex gap-5">
-           <div className="card_container w-[900px] grid grid-cols-3 mb-10">
+           <div className="card_container w-[900px] grid grid-cols-3 mb-10 gap-y-4">
 
             {
 
