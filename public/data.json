@@ -1,0 +1,75 @@
+[
+    {
+      "id":1,
+      "cover": "https://i.postimg.cc/1Xghy0jS/Rectangle-2-2.png",
+      "title": "Introduction to C Programming",
+      "description": "It is a very popular language, despite being old. The main reason for its popularity is because it is a fundamental language in the field of computer science.",
+      "price": 35000,
+      "credit": 5
+    }, 
+    {
+      "id":2,
+      "cover": "https://i.postimg.cc/0jG3kt0L/Rectangle-2-3.png",
+      "title": "Introduction to Algorithms",
+      "description": "A comprehensive update of the leading algorithms text, with new material on matchings in bipartite graphs, online algorithms, machine learning, and other topics.",
+      "price": 19000,
+      "credit": 5
+    },
+    {
+      "id":3,
+      "cover": "https://i.postimg.cc/G2rDjC07/Rectangle-2-4.png",
+      "title": "Introduction to C++ for DSA",
+      "description": "Key concepts of C++ DSA include Arrays, Linked Lists, Stacks, Queues, Trees, and Graphs. Common Algorithms in C++ DSA include Sorting, Searching, Graph, and Dynamic..",
+      "price": 23000,
+      "credit": 2
+    },
+    {
+      "id":4,
+      "cover": "https://i.postimg.cc/vHJgF3NQ/Rectangle-3.png",
+      "title": "Basic Data Structures",
+      "description": "A data structure is not only used for organizing the data. It is also used for processing, retrieving, and storing data. There are different basic and advanced types of data structures that",
+      "price": 35000,
+      "credit": 5
+    },
+    {
+      "id":5,
+      "cover": "https://i.postimg.cc/Nf4v8MvR/Rectangle-2.png",
+      "title": "Introduction to OOP Python",
+      "description": "In Python, object-oriented Programming (OOPs) is a programming paradigm that uses objects and classes in programming. It aims to implement real-world entities like..",
+      "price": 19000,
+      "credit": 5
+    },
+    {
+      "id":6,
+      "cover": "https://i.postimg.cc/Y0tR3tQs/Rectangle-2-5.png",
+      "title": "Software Engineering",
+      "description": "Software engineering is the branch of computer science that deals with the design, development, testing, and maintenance of software applications.",
+      "price": 23000,
+      "credit": 2
+    },
+    {
+      "id":7,
+      "cover": "https://i.postimg.cc/1z25wt1y/Rectangle-3-1.png",
+      "title": "AWS, Cloud Computing",
+      "description": "In 2006, Amazon Web Services (AWS) began offering IT infrastructure services to businesses as web services—now commonly known as cloud computing.",
+      "price": 35000,
+      "credit": 5
+    },
+    {
+      "id":8,
+      "cover": "https://i.postimg.cc/bvY5zHZ5/Rectangle-2-1.png",
+      "title": "Database (MySQL)",
+      "description": "MySQL Database is a client/server system that consists of a multithreaded SQL server that supports different back ends, several different client programs",
+      "price": 19000,
+      "credit": 5
+    },
+    {
+      "id":9,
+      "cover": "https://i.postimg.cc/d16rJrT5/Rectangle-2-6.png",
+      "title": "Problem-Solving Part",
+      "description": "Problem solving is the process of identifying a problem, developing possible solution paths, and taking the appropriate course of action. Why is problem solving important?",
+      "price": 23000,
+      "credit": 2
+    }
+  ]
+
