@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
+import { BsBook } from 'react-icons/bs';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -73,7 +74,11 @@ allCourses.map(course => (
    <p className='text-sm font-normal'><small>{course.description}</small></p>
     <div className='flex justify-between'>
         <div><p className='font-bold'>$ <span> Price : {course.price}</span></p></div>
-        <div><p className='font-bold'><span> Credit : {course.credit}hr</span></p></div> 
+
+        <div className='flex items-center font-bold gap-2'>
+            <div><BsBook></BsBook></div>
+            <p> Credit : {course.credit}hr</p>
+            </div> 
     </div>
   
      <button onClick={()=> handleSelectCourse(course)} className='bg-blue-800 w-full p-2 mt-2 text-white font-bold'>Select</button>
