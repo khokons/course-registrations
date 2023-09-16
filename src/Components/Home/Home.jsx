@@ -1,3 +1,4 @@
+/* eslint-disable no-unreachable */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
@@ -10,6 +11,7 @@ const Home = () => {
     const [allCourses, setAllCourses]=useState([]);
     const [selectedCourses, setSelectedCourses] =useState([])
     const [totalCost, setTotalCost] = useState(0)
+    const [remaining, setRemaining] =useState(0)
 
     useEffect(() =>{
         fetch('./data.json')
@@ -23,7 +25,7 @@ const Home = () => {
         const isExist =selectedCourses.find((item) => item.id==course.id);
         let count = course.credit;
         if(isExist){
-            return toast("Already paid this course");
+            return toast.error("Already paid this course");
         }
         else{
 
@@ -32,8 +34,20 @@ const Home = () => {
                 count = count+item.credit
             });
 
-            setTotalCost(count)
-            setSelectedCourses([...selectedCourses,course])
+            const totalRemaining = 20-count;
+            if(count > 20){
+                return toast.error("Your credit is over & insufficient balance")
+                
+
+            }
+
+            else{
+                setTotalCost(count)
+                setRemaining(totalRemaining);
+                setSelectedCourses([...selectedCourses,course])
+            }
+
+            
         }
         
 
@@ -74,6 +88,7 @@ allCourses.map(course => (
 <Cart
 selectedCourses={selectedCourses}
 totalCost={totalCost}
+remaining={remaining}
 ></Cart>
 </div>
 </div>

@@ -2,11 +2,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const Cart = ({selectedCourses,totalCost}) => {
+const Cart = ({selectedCourses,totalCost,remaining}) => {
     return (
         <div>
             
-            <h1 className='text-lg font-bold text-[#2F80ED]'>Credit Hour Remaining  hr</h1>
+            <h1 className='text-lg font-bold text-[#2F80ED]'>Credit Hour Remaining {remaining} hr</h1>
             <hr />
             <h2 className='text-4xl mb-5 mt-5'>Courses Name</h2>
             <hr />
